@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPageActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainPageActivity">
+<!--权重分配，使得可以在listview加东西,去掉分割横线-->
+        <ListView
+            android:id="@+id/MyListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@null">
+
+        </ListView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="60dp">
+
+            <View
+                android:id="@+id/sLine1"
+                android:layout_width="5dp"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/colorGray" />
+            <!--字体加粗-->
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toEndOf="@id/sLine1"
+                android:layout_toRightOf="@id/sLine1"
+                android:gravity="center"
+                android:text="@string/month_test"
+                android:typeface="serif"
+                android:textColor="@color/colorGray"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@+id/sLine2"
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/month"
+                android:layout_toRightOf="@id/month"
+                android:background="@color/colorGray" />
+            <!--字体样式：字体加粗-->
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/sLine2"
+                android:layout_toRightOf="@id/sLine2"
+                android:gravity="center"
+                android:text="@string/year_test"
+                android:textColor="@color/colorGray"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/sLine3"
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toEndOf="@id/year"
+                android:layout_toRightOf="@id/year"
+                android:background="@color/colorGray" />
+
+            <LinearLayout
+                android:id="@+id/setting_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/change_button"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_toLeftOf="@id/setting_button"
+                android:layout_toStartOf="@id/setting_button"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/colorGray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorGray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorGray" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/sLine4"
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_toStartOf="@id/change_button"
+                android:layout_toLeftOf="@id/change_button"
+                android:background="@color/colorGray" />
+
+            <RelativeLayout
+                android:id="@+id/add"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+                <View
+                    android:id="@+id/add_line1"
+                    android:layout_width="3dp"
+                    android:layout_height="12dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorGray" />
+                <!--旋转90度变水平-->
+                <View
+                    android:id="@+id/plus_line2"
+                    android:layout_width="3dp"
+                    android:layout_height="14dp"
+                    android:layout_alignTop="@+id/add_line1"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/colorGray"
+                    android:rotation="90" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grey_border"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/day_in_week"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="MON"
+                android:textColor="@color/colorGray"
+                android:textSize="16dp"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray"/>
+
+            <TextView
+                android:id="@+id/day_in_month"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorGray"
+                android:textSize="26sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/diary_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorGray"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="testing content"
+            android:lines="2"
+
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

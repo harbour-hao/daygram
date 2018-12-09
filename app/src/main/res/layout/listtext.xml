@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/listtext_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorGray"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:text="10 "/>
+
+    <TextView
+        android:id="@+id/listtext_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/listtext_day"
+        android:layout_toRightOf="@id/listtext_day"
+        android:textColor="@color/colorGray"
+        android:textSize="16sp"
+        android:typeface="serif"
+        android:text="MONDAY"/>
+
+    <TextView
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/listtext_week"
+        android:layout_toRightOf="@id/listtext_week"
+        android:textColor="@color/colorGray"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:typeface="serif"
+        android:text=" /"
+        />
+
+    <TextView
+        android:id="@+id/listtext_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listtext_day"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@id/divide"
+        android:layout_toRightOf="@id/divide"
+        android:text="testing"
+        android:textColor="@color/colorGray"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:typeface="sans" />
+
+</RelativeLayout>

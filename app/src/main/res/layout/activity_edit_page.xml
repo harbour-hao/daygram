@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    tools:context=".EditPageActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grey_border">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/titleweek"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/colorGray"
+                android:textStyle="bold"
+                android:text="WEDNESDAY"
+                />
+
+
+            <TextView
+                android:id="@+id/datetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/colorGray"
+                android:textStyle="bold"
+                android:text="/NOVEMBER 18/2018"
+                />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/title_line"
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:background="@color/colorGray"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_line"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/diary_content_editor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_below="@id/title_line"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorGray"
+                android:textStyle="normal"
+                android:lineSpacingExtra="4dp"
+                android:typeface="sans"
+                android:gravity="top"
+                android:background="@null" />
+
+            <RelativeLayout
+                android:id="@+id/bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/clock"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true">
+
+                    <View
+                        android:id="@+id/clock_circle"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/gray_circle_border"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"/>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="6dp"
+                        android:background="@color/colorGray"
+                        android:layout_alignLeft="@id/clock_circle"
+                        android:layout_alignTop="@id/clock_circle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="8dp"/>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="2dp"
+                        android:background="@color/colorGray"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart= "true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/done_line1"
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/colorGray"/>
+                <!--把DONE限制在两条竖线之间-->
+                <TextView
+                    android:id="@+id/done_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/done_line1"
+                    android:layout_toLeftOf="@id/done_line1"
+                    android:layout_centerVertical="true"
+                    android:text="DONE"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorGray"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <View
+                    android:id="@+id/done_line2"
+                    android:layout_width="2dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/done_button"
+                    android:layout_toLeftOf="@id/done_button"
+                    android:background="@color/colorGray"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
