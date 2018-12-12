@@ -1,5 +1,6 @@
 package com.example.asus.daygram;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -60,7 +61,7 @@ public class MainPageActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         //listview的点击事件
         listView.setOnItemClickListener(new mItemClick());
-       // listView.setOnItemLongClickListener(new lItemClick());
+        listView.setOnItemLongClickListener(new lItemClick());
         //添加当天日记
         final RelativeLayout addButton = (RelativeLayout) findViewById(R.id.add);
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -303,6 +304,42 @@ public class MainPageActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivityForResult(intent, 1);
             //Log.d(TAG,"click");
+        }
+    }
+    //长按删除
+    class lItemClick implements AdapterView.OnItemLongClickListener
+    {
+        private int deleteposition;
+        @Override
+        public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l)
+        {
+            this.deleteposition=i;
+            if(DaycontentsList.get(i).getContent()!=null)
+            {
+                Log.d(TAG,"long1");
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(MainPageActivity.this);
+                dialog.setTitle("daygram");
+                dialog.setMessage("是否删除"+DaycontentsList.get(i).getDay()+"号的日记");
+                dialog.setCancelable(true);
+                dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int where) {
+                        Log.d(TAG,"where:"+where);
+                        DaycontentsList.get(deleteposition).setContent(null);
+                        adapter.refreshdata(DaycontentsList);
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+                dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                dialog.show();
+            }
+            return true;
+
         }
     }
 
