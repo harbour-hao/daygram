@@ -3,7 +3,8 @@
 因为编译器sdk的不同，建议自己先在AS上新建空的项目，可以运行hello world后，只需把本项目的app下的src文件替换到你刚刚新建的项目下的src文件即可
 项目主页面和编辑页面截图
 ![](https://github.com/harbour-hao/daygram/blob/master/img-folder/edit.JPG)
-！[] （https://github.com/harbour-hao/daygram/blob/master/img-folder/main.JPG）
+![]（https://github.com/harbour-hao/daygram/blob/master/img-folder/main.JPG）
+
 主要功能
 下方显示月[8月]和年[2015]，点击月可以选择一个月份，点击年可以选择年份（今年以前）
 主界面显示选中月份的日记缩略（如果曾经写了日记的话），每天一条（不包括将来），如果某一日无日记显示一个黑点
